@@ -1,0 +1,12 @@
+Criticos:
+La app no presenta una estructura de Api RestFull para poder realizar las peticiones HTTP indicadas (GET,POST Etc)
+La conexion a la BD de Datos no proporciona los datos del host y puerto  (MongoClient...)
+En general las rutas de los endpoint no disponen de algun metodo de autenticación para darle seguridad a la app (por Ej: JWT)
+
+Otros:
+Los codigos de estado HTTP indicados, no son los correctos, ya que en las rutas correspondientes a creacion(/addAnswer, /addPoll) la respuestra invoca un codigo '200' (OK), generalmente usado para
+las peticiones tipo GET, y en este caso al tratarse de un post de creacion, deberian ser '201' (CREATE)
+
+La peticion /getPolls no contenia el codigo de estado.
+
+La conexion a la BD de Datos no proporciona los datos del host y puerto  (MongoClient...)
